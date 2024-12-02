@@ -1,0 +1,121 @@
+\documentclass[12pt]{book}
+
+% packages
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} % For mathematical equations
+\usepackage{import}
+\usepackage[greek,english]{babel} % for Greek and English language
+\usepackage{alphabeta} % same
+\usepackage{multirow,booktabs} % for multirow in tables
+\usepackage{amsmath,amsthm,amssymb} % for math formatting
+\usepackage[margin=3cm]{geometry} % for page layout
+\usepackage[most]{tcolorbox} % for shaded boxes
+\usepackage{hyperref} % for hyperlinks
+\usepackage{caption} % customizing captions
+\usepackage{enumitem} % for list customizations
+\usepackage{makecell}	% for a second line in the same table cell
+\usepackage{array} % colorbox and arrays inside them
+\usepackage{framed}
+\usepackage{empheq}
+\usepackage{colortbl}	%
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+
+% numbering
+\usepackage{chngcntr}	% tablenumbering
+\counterwithin{table}{subsection}		
+\counterwithin{figure}{subsection}	% changes the numbering depth
+\numberwithin{equation}{subsection}	% changes the numbering depth
+
+% geometry setup
+\geometry{margin=3cm} % uniform margins
+
+% custom colors
+\definecolor{bluebox}{RGB}{242,248,253}
+\definecolor{redbox}{RGB}{255,242,242}
+\definecolor{greenbox}{RGB}{250,255,250}
+\definecolor{darkgreenbox}{RGB}{0,85,0}
+\definecolor{greybox}{RGB}{247,247,247}
+\definecolor{lightgkri}{RGB}{210,210,210}
+\definecolor{piolightgkri}{RGB}{249,249,249}
+\definecolor{skourogkri}{RGB}{150,150,150}
+\definecolor{mavro}{RGB}{0,0,0}
+
+% more on colors
+\usepackage{xcolor}
+\colorlet{shadecolor}{red!5!white}
+\colorlet{framecolor}{red!50!white}																						
+\renewenvironment{shaded*}{%
+  \def\FrameCommand{\setlength{\FrameRule}{2pt}\fboxsep=\FrameSep \fcolorbox{framecolor}{shadecolor}}%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+ {\endMakeFramed}
+
+% box customizations
+\newtcolorbox{orismos}[1]{fonttitle=\bfseries,beamer,title=Lower separated,colback=greybox,
+title={#1}}
+
+\newtcolorbox[auto counter,number within=subsection]{prdgm}[2][]{%				
+enhanced,colback=bluebox,colframe=blue!75!black,fonttitle=\bfseries,breakable,drop fuzzy shadow=black!50!white,				%blue!5!white
+title=Παράδειγμα~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=subsection]{askisi}[2][]{%
+enhanced,colback=redbox,colframe=red!95!black,fonttitle=\bfseries,breakable,drop fuzzy shadow=black!50!white,												%red!5!white
+title=Άσκηση~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{ergasia}[2][]{%
+enhanced,colback=white,colframe=black!95!white,fonttitle=\bfseries,breakable,drop fuzzy shadow=black!50!white,
+title=Εργασία~\thetcbcounter: #2,#1}
+
+
+% custom captions
+\captionsetup[table]{name=Πίνακας}
+\captionsetup[figure]{name=Εικόνα}
+
+% miscellaneous
+\usepackage{xfrac} % for tipped over fractions
+\setlength{\parindent}{0pt} % for no indentation for paragraphs
+
+
+% some unit shortcuts
+\newcommand{\monm}{\text{ }$m$\text{ }}
+\newcommand{\mons}{\text{ }$s$\text{ }}
+\newcommand{\monkg}{\text{ }$Kg$\text{ }}
+\newcommand{\monms}{\text{ }$\sfrac{m}{s}$\text{ }}
+\newcommand{\monmss}{\text{ }$\sfrac{m}{s^2}$\text{ }}
+\newcommand{\monN}{\text{ }$N$\texxt{ }}
+\newcommand{\monJ}{\text{ }$J$\text{ }}
+\newcommand{\monW}{\text{ }$W$\text{ }}
+
+
+
+
+
+% Custom Greek translations for specific captions
+\addto\captionsenglish{
+    \renewcommand{\chaptername}{Κεφάλαιο}
+    \renewcommand{\contentsname}{Περιεχόμενα}
+}
+
+
+
+
+% Document Metadata
+\title{Φυσική Α' Λυκείου}
+\author{Δρ Στυλιανός Καρύδας}
+
+\begin{document}
+
+
+\maketitle % Title page
+\tableofcontents % Table of contents
+
+
+
+% Include chapters
+\include{chapters/book1} % Automatically adds .tex
+%\include{chapters/book2} % Automatically adds .tex
+
+\end{document}
