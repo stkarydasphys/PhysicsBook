@@ -8,6 +8,6 @@ Instead of fighting this phase transition, we should embrace it and change the e
 
 Most of the exercise related pictures and graphs where made with Wolfram Mathematica notebooks, which will be included in the repository, but keep in mind that quite a few of them are "handmade" with Mathematica drawing tools. Some of the original pictures from the Ministry issued book where also used, as well as some of the pictures from the "Bank of Exercises", hence this book is not allowed to be sold without further licencing.
 
-Feel free to use any part of it in whatever way you like except for profit :P because you'll be breaking the greek law!
+Feel free to use any part of it in whatever way you like except for profit :P because you'll be breaking the greek law!  
 
 Lastly, I hear you ask "Oi stelio, what is the reason for a repository for a book that nobody will ever read?" Well, since I'm in the process of changing careers and diving into data science, the reason I made this repository is threefold: firstly it is a chance to sharpen my git skills a bit with work I've already done in the past years. Secondly, to showcase my basic LaTeX knowledge for future employers and lastly to show that I can deliver a product that nobody asked for and nobody will pay for. How awesome am I?
